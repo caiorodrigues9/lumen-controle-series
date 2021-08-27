@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
-class SeriesController
+use App\Models\Serie;
+
+
+class SeriesController extends BaseController
 {
-    public function index()
+    public function __construct()
     {
-        return ['teste 1','teste 2'];
+        $this->classe = Serie::class;
     }
 }
